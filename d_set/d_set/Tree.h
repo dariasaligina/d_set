@@ -64,14 +64,14 @@ private:
         }
     }
 
-    friend void errase_nd(Tree < T >*& t, T key) {
+    friend void erase_nd(Tree < T >*& t, T key) {
         if (!t) return;
         if (t->key == key) {
             merge(t, t->l, t->r);
             return;
         }
         else
-            errase_nd(key < t->key ? t->l : t->r, key);
+            erase_nd(key < t->key ? t->l : t->r, key);
     }
 
     friend bool is_in_nd(Tree < T >* t, T key) {
