@@ -29,8 +29,8 @@ public:
 		}
 	}
 
-	void errase(T n) {
-		errase_nd(root, n);
+	void erase(T n) {
+		erase_nd(root, n);
 	}
 
 	vector<T> to_vector() {
@@ -64,7 +64,7 @@ public:
 		vector<T> v = r.to_vector();
 		d_set ans = this->copy();
 		for (auto i : v) {
-			ans.errase(i);
+			ans.erase(i);
 		}
 		return ans;
 	}
